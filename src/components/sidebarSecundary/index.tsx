@@ -26,7 +26,7 @@ export function SidebarSecundary() {
   const location = useLocation();
   const nameLocation = location.pathname.split("/")[1];
   let subItems: SubItem[];
-  if (nameLocation === "auth") {
+  if (nameLocation === "user") {
     subItems = SUB_ITEMS_USER;
   } else {
     subItems = [];
