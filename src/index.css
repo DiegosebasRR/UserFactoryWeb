@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-code: #3e4361;
+    --border-code: rgb(80, 79, 79);
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 346.8 77.2% 49.8%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background-code: #2a2d41;
+    --border-code: rgb(175, 175, 175);
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 346.8 77.2% 49.8%;
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 346.8 77.2% 49.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.syntax-highlighter {
+  color: #fff;
+  background-color: var(--background-code) !important;
+  font-family: Droid Sans Mono;
+  padding: 0.5em;
+  font-weight: 500;
+  border: var(--border-code) 2px solid;
+  border-radius: 10px;
+  overflow: auto;
+  scrollbar-color: #fad02c black;
+  scrollbar-width: thin;
+}
+
+.syntax-highlighter .language-typescript > span:hover {
+  background-color: rgba(224, 224, 173, 0.2) !important;
+}
+
+.syntax-highlighter .language-typescript .linenumber {
+  color: rgb(126, 120, 135) !important;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-color: transparent;
+  border-right: 2px solid rgb(126, 120, 135);
+}
+
+.syntax-highlighter .language-typescript .linenumber:hover {
+  color: rgb(213, 214, 133) !important;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.syntax-highlighter .language-typescript .hljs-comment {
+  color: #e9b7c1;
+  font-weight: 450;
+}
+
+.syntax-highlighter .language-typescript .hljs-keyword {
+  color: #d86fc0;
+}
+
+.syntax-highlighter .language-typescript .hljs-function {
+  color: #4098d7;
+}
+
+.syntax-highlighter .language-typescript .hljs-title {
+  color: #d8e2a9;
+}
+
+.syntax-highlighter .language-typescript .hljs-tag {
+  color: #d4d4d4;
+}
+
+.syntax-highlighter .language-typescript .hljs-name {
+  color: #4098d7;
+}
+
+.syntax-highlighter .language-typescript .hljs-attr {
+  color: #86ddff;
+}
+
+.syntax-highlighter .language-typescript .hljs-string {
+  color: #e11d48;
+}
+
+.syntax-highlighter .language-typescript .hljs-built_in {
+  color: #00d5b0;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .syntax-highlighter {
+    max-width: 550px;
+  }
+}
